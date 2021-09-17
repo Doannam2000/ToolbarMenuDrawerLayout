@@ -2,10 +2,7 @@ package dd.wan.demomenutoolbardrawer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
@@ -19,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar as Toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         btn_popMenu.setOnClickListener {
             var popupMenu = PopupMenu(this, it)
             popupMenu.menuInflater.inflate(R.menu.menu, popupMenu.menu)
